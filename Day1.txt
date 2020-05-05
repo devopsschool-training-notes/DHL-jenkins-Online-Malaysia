@@ -1,0 +1,234 @@
+Demo - AWS
+Lab - AWS
+========================
+
+Start time – 9am, Malaysia Time Zone
+
+End time – 5pm, Malaysia Time Zone
+
+Break time – 10.30am – 10.40am , 12.30pm – 1.30pm, 3.30pm – 3.40pm, Malaysia Time Zone
+============================================================================================
+Jenkins - 2 Days
+================
+16 hours.
+=======================================
+www. RajeshKumar.xyz
+=====================================
+What is DevOps?
+--------------------------
+	 Objetective 
+		- Immediate Release
+		- Cost Reduction - Avoiding a wastage
+		- Improving a Quality
+
+What is jenkins?
+	CI tool
+	Release
+		Community - Free - OpenSource
+		Enterprise -  Community + (Prod REady Plugins) by Cloudbees - Paid
+	Powered by Plugins (100s+)
+	Version - 2.X
+	Written in Java
+		Platform indep
+		JRE
+	Old Name - hudson
+=============================
+What is CI?
+	Cont Integration.
+
+What Cont Integration?
+	Auto Build ->  Auto Test 
+	-------IMM FEEDBACK--------
+
+-----------------------SDLC-----------------------------------------
+Plan -> Code -> Code Review -> Build -> UT -> Pack -> Archving -> Dep2QA -> Accept Test -> Code Coverage
+-------------------------------------------------------------------------------------------------------------
+Jira -> Git   -> SonarQube  -> Maven -> Junit -> Jar -> Artifactory -> Ansible -> Selenium -> Jacoco
+---------------------------------------AUTOMATION---------------------------------------------------------
+Architect --> Dev -> BR  --> QA --> Ops
+
+			Integ all Phases --> CD -> DevOps
+			Integ All Tools ---------------------------> JENKINS
+			Interg All People --> DevOps
+=============================================================================================================
+					Jenkins
+						Integ tools
+						Way to Automate Manual Steps
+						Scheduling
+						IMM FEEDBACK
+						
+Dep2QA
+--------------------------
+1 Dep -> 9 mins.
+100 Dep -> 9 mins
+-------------------------
+	? Parrell Deployment.
+------------------------------------
+Coding - Ansible -> Puppet - Chef
+Gui - Octopus Deploy - Udeploy
+===========================================
+1000 Dep - 1 Second.	
+===========================================
+Docker -> Kubernetes
+
+
+Software Dev Model - Waterfall -> Agile -> DevOps
+Software Dev Arch - Monolithic -> SOA -> Microservices
+
+
+What is def of tool?
+	- Save time
+	- Save cost
+	- Quantitiy and Quality of the work should be improved.
+
+
+	Cont Dev
+	Automation tool
+==================================================================================
+Other tools - Teamcity - Bamboo - UBuild - TravisCI
+https://www.devopsschool.com/path/
+
+
+
+
+Architecture of Jenkins
+======================================
+Jenkins
+	WEB (Front End  Based on GUI) - Mangaed by Human.
+		8080
+		GUI
+		Using GUI you can
+			Integ tools
+			Automate Manual Steps
+			Scheduling
+			IMM FEEDBACK
+	Backend( Slave or Worker)
+		Would do the real work
+		LINUX
+		WINDOWS
+https://www.devopsschool.com/blog/jenkins-architecture-explained/
+
+
+How to install jenkins?
+	JRE + JDK
+	Jenkins
+========================================
+https://www.devopsschool.com/tutorial/jenkins/jenkins-installation-and-configuration.html
+
+3.7.71.239
+----------------------
+http://3.7.71.239:8080/
+rajesh
+rajesh123
+
+
+Jenkin
+	Way to Automate Manual Steps
+	Scheduling
+	IMM FEEDBACK
+	Integ tools
+====================================================================
+How to start working with Jenkins?
+=======================================
+
+Secret formula to work with Jenkins?
+=========================================
+What is your Technology?
+				version
+		Java
+		dotnet
+		node
+		python
+		ruby
+
+Where is the code?	
+				repo loc	access
+		git	
+		svn
+		p4
+		tfs
+	
+What is your builders?
+		Anything
+		maven	pom.xml		goal	compile -> test -> package -> install -> deploy - clean
+		ant	build.xml	target		
+		gradle	gradle.build	Tasks
+		msbuild	default.msbuild target	
+
+	
+How frequenly you want this job to be triggered?
+		hourly
+
+How you want a feedback of this job?
+		email - rajesh@scmgalaxy.com
+------------------------------------- 
+
+
+What is your Technology?
+		Java
+Where is the code?
+		https://github.com/devopsschool-demo-labs-projects/helloworld-java-maven
+How frequenly you want this job to be triggered?
+		hourly
+What is your builders?
+		maven
+
+How you want a feedback of this job?
+		email to rajesh@scmgalaxy.com
+
+======================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
