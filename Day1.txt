@@ -185,6 +185,61 @@ Step 2 - Setup a 3 job based on Java and Maven by following rules of
 Step 3 - Create a view for your project "Day1"
 Step 3 -  Create a foler and org your job.
 
+===================================================================================
+How can you Scheduling using jenkins?
+======================================================
+1. AT CERTAIN TIME == Build periodically
+2. AT CERTAIN TIME BUT Build only when there is SrC changes = Poll SCM
+3. Trigger using command line = Trigger builds remotely (e.g., from scripts)
+https://www.devopsschool.com/blog/how-to-trigger-builds-remotely-in-jenkins/
+
+	Step 1. Enable "Trigger builds remotely (e.g., from scripts)"
+	Step 2. Craete a url for trigger - 
+			http://3.7.71.239:8080/view/devopsschool/job/job3/build
+			http://3.7.71.239:8080/view/devopsschool/job/job3/build?token=iFBDOBhNhaxL4T9ass93HRXun2JF161Z
+			iFBDOBhNhaxL4T9ass93HRXun2JF161Z
+	Step 3	generate user token
+
+curl -X POST http://rajesh:111f6b3da00b796d1a324db3e5fb817c5f@3.7.71.239:8080/job/job3/build?token=iFBDOBhNhaxL4T9ass93HRXun2JF161Z
+
+4. Trigger this job of other job is triggerred == Build after other projects are built
+
+5. Trigger a job when you there is PUSH into Github == GitHub hook trigger for GITScm polling
+https://www.devopsschool.com/blog/how-to-build-when-a-change-is-pushed-to-github-in-jenkins/
+	Step 1 - Install the Github Jenkins plugin
+	Step 2 - Configure the “GitHub plugin” with github accounts and Token f9acfcd9d097e7ccc625a24988ded187588037a2
+	Step 3 - Configure Jenkins Job on which you want push trigger should be effective.
+	Step 4 - Configure "webhook” on github for the specific repository.
+			http://3.7.71.239:8080/github-webhook/
+
+
+Install Plugins - Plugins Manager
+Install tool - Global Tool Configuration
+Config tool - Configure System
+
+
+
+
+
+
+
+
+=========================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
