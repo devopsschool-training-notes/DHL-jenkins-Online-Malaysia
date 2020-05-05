@@ -178,55 +178,12 @@ How you want a feedback of this job?
 
 ======================================================================================
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Lab - 1
+Step 1- Setup a Jenkins
+Step 2 - Setup a 3 job based on Java and Maven by following rules of
+					- Mine (Refer up)
+Step 3 - Create a view for your project "Day1"
+Step 3 -  Create a foler and org your job.
 
 
 
