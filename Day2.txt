@@ -164,6 +164,203 @@ Imm feedback
 	- Pipeline - Scripting - New 
 ========================================================
 Scan -> Compile -> Test -> Package -> Deploy -> CodeCoverage
+=======================================================================
+
+- Pipeline - Scripting - New 
+===========================================
+======================jenkinsfile in groovy================================
+---------------------PIPELINE------------------------------
+PHASE 1 --> PHASE 2 --> PHASE 3 --> PHASE 4 --> PHASE 5-->
+Step1		Step1	Step1
+Step2		Step2	Step2
+Stpe3		Stpe3
+
+
+
+pipeline {
+   agent any
+
+   tools {
+      // Install the Maven version configured as "M3" and add it to the path.
+      maven "M3"
+   }
+
+   stages {
+      stage('Build') {
+         steps {
+            // Get some code from a GitHub repository
+            git 'https://github.com/jglick/simple-maven-project-with-tests.git'
+
+            // Run Maven on a Unix agent.
+            sh "mvn -Dmaven.test.failure.ignore=true clean package"
+
+            // To run Maven on a Windows agent, use
+            // bat "mvn -Dmaven.test.failure.ignore=true clean package"
+         }
+
+         post {
+            // If Maven was able to run the tests, even if some of the test
+            // failed, record the test results and archive the jar file.
+            success {
+               junit '**/target/surefire-reports/TEST-*.xml'
+               archiveArtifacts 'target/*.jar'
+            }
+         }
+      }
+   }
+}
+
+
+How can i learn more about pipeline scripting?
+https://www.jenkins.io/doc/book/pipeline/
+https://github.com/devopsschool-sample-programs/jenkins-groovy-scripts-collection
+https://github.com/devopsschool-sample-programs/jenkins-jenkinsfile-example-collection
+
+
+pipeline {
+   agent any
+
+   tools {
+      // Install the Maven version configured as "M3" and add it to the path.
+      maven "maven-rajesh-latest"
+   }
+
+   stages {
+      stage('Build') {
+         steps {
+            // Get some code from a GitHub repository
+            git 'https://github.com/scmgalaxy/jacoco-maven-unittestv2'
+
+            // Run Maven on a Unix agent.
+            sh "mvn -Dmaven.test.failure.ignore=true clean compile"
+
+            // To run Maven on a Windows agent, use
+            // bat "mvn -Dmaven.test.failure.ignore=true clean package"
+         }
+      }
+	stage('Test') {
+         steps {
+            // Get some code from a GitHub repository
+            git 'https://github.com/jglick/simple-maven-project-with-tests.git'
+
+            // Run Maven on a Unix agent.
+            sh "mvn -Dmaven.test.failure.ignore=true clean test"
+
+            // To run Maven on a Windows agent, use
+            // bat "mvn -Dmaven.test.failure.ignore=true clean package"
+         }
+
+         post {
+            // If Maven was able to run the tests, even if some of the test
+            // failed, record the test results and archive the jar file.
+            success {
+               junit '**/target/surefire-reports/TEST-*.xml'
+               archiveArtifacts 'target/*.jar'
+            }
+         }
+      }
+	stage('Deploy') {
+         steps {
+            // Get some code from a GitHub repository
+            git 'https://github.com/jglick/simple-maven-project-with-tests.git'
+
+            // Run Maven on a Unix agent.
+            sh "mvn -Dmaven.test.failure.ignore=true clean deploy"
+
+            // To run Maven on a Windows agent, use
+            // bat "mvn -Dmaven.test.failure.ignore=true clean package"
+         }
+
+         post {
+            // If Maven was able to run the tests, even if some of the test
+            // failed, record the test results and archive the jar file.
+            success {
+               archiveArtifacts 'target/*.jar'
+            }
+         }
+      }
+   }
+}
+=========================
+Jenkins - community
+jenkins - cloudbess
+jenkins - blueocean
+jenkins - jenkins x
+
+
+
+Jenkins Authentication
+===============================================
+	- LDAP
+	- USER ID and Pass
+	- OpenID
+
+Jenkins Authorization
+
+
+
+
+
+Jenkins Node Management and HA
+===============================================
+	Scalability
+	High Availability
+============================================
+Cond 1 - 
+YOU DO NOT HAVE MORE VMs.
+
+1 JOB - 1 HOurs - 24 hours = 1 NODE
+2 JOB - 1 HOUR - 24 HOUR - ?????
+
+
+
+
+
+
+
+
+/var/lib/jenkins/workspace/job10/package.jar
+/var/lib/jenkins/workspace/job10@2/package.jar
+
+http://13.233.153.9:8080/job/job10/lastBuild/
+===============================================================================
+===============================================================================
+Execute concurrent builds if necessary
+===============================================================================
+===============================================================================
+# of executors
+===============================================================================
+===============================================================================
+How to add Build Node?
+====================================
+	Add Manual vms.
+	add In cloud
+	Add in Container
+
+ADD a NODE
+	LINUX
+	13.127.217.43
+		JDK
+		IP
+		USER
+		PASSWORD
+		WORKDIR DIR	
+
+	WINDOWS
+
+
+
+Jenkins Backup and Restore
+--------------------------------------
+Disk Space Maintance
+--------------------------------------
+
+Job1 -----
+
+		ANY AVAILABALE NODE....
+
+
+
 
 
 
